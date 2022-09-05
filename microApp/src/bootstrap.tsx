@@ -1,7 +1,7 @@
 import React from 'react'
 import { createRoot } from 'react-dom/client'
 
-import RenderRouter from 'MicroContainer/components/layout'
+import RenderRouter, { AppLayout } from 'MicroContainer/components/layout'
 import routes from './routes/index'
 
 import 'MicroContainer/styles/base'

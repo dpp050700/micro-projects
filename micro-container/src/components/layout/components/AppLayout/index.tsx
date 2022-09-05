@@ -11,7 +11,7 @@ const { Header, Sider, Content, Footer } = Layout
 
 // interface IAppLayout {}
 
-export default function AppLayout() {
+export default function AppLayout({ children }: any) {
   const [collapsed, setCollapsed] = useState(false)
   const toggleCollapsed = () => {
     setCollapsed(!collapsed)
@@ -38,6 +38,7 @@ export default function AppLayout() {
         </Header>
         <Content className={style['app-content']}>
           <Outlet />
+          {children}
         </Content>
         <Footer className={style['app-footer']}>Micro Admin By Webpack</Footer>
       </Layout>

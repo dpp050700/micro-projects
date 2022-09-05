@@ -19,6 +19,16 @@ export default function AppMenu() {
       key: '/user/admin',
       label: '管理员列表',
       icon: <UserOutlined />
+    },
+    {
+      key: '/vue/vModel',
+      label: 'VModel',
+      icon: <UserOutlined />
+    },
+    {
+      key: '/vue/vBind',
+      label: 'vBind',
+      icon: <UserOutlined />
     }
   ]
 

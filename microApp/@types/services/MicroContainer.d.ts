@@ -80,7 +80,7 @@ declare module 'MicroContainer/components/antd' {
   export { default as Collapse } from 'antd/es/collapse';
   export { default as Layout } from 'antd/es/layout';
   export { default as Avatar } from 'antd/es/avatar';
-  export { MenuFoldOutlined, MenuUnfoldOutlined, UserOutlined } from '@ant-design/icons';
+  export { MenuFoldOutlined, MenuUnfoldOutlined, UserOutlined, EyeInvisibleOutlined, EyeOutlined, LockOutlined } from '@ant-design/icons';
 
 }
 declare module 'MicroContainer/components/button' {
@@ -96,7 +96,7 @@ declare module 'MicroContainer/components/button' {
 }
 declare module 'MicroContainer/components/button/type' {
   export interface ITheme {
-      theme?: 'normal' | 'dark';
+      theme?: 'normal' | 'dark' | 'ddd';
   }
 
 }
@@ -111,12 +111,8 @@ declare module 'MicroContainer/components/layout/components/AppHeader' {
 
 }
 declare module 'MicroContainer/components/layout/components/AppLayout' {
-  import React from 'react';
-  interface IAppLayout {
-      children: React.ReactNode;
-  }
-  export default function AppLayout({ children }: IAppLayout): JSX.Element;
-  export {};
+  /// <reference types="react" />
+  export default function AppLayout(): JSX.Element;
 
 }
 declare module 'MicroContainer/components/layout/components/AppMenu' {
@@ -131,7 +127,9 @@ declare module 'MicroContainer/components/layout/components/UserAvatar' {
 }
 declare module 'MicroContainer/components/layout' {
   /// <reference types="react" />
+  import AppLayout from 'MicroContainer/components/layout/components/AppLayout';
   export default function RenderRoutes({ routes }: any): JSX.Element;
+  export { AppLayout };
 
 }
 declare module 'MicroContainer' {

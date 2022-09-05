@@ -1,4 +1,8 @@
-import LoginRoutes from 'MicroUser/page'
-import ClientRoutes from 'MicroBook/page'
+// import LoginRoutes from 'MicroUser/page'
+import BookRoutes from 'MicroBook/page'
 
-export default [...LoginRoutes, ...ClientRoutes]
+// export default [...LoginRoutes, ...ClientRoutes]
+
+import VueRoutes from 'MicroVue/page'
+
+export default [...VueRoutes, ...BookRoutes]

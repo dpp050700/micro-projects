@@ -22,11 +22,22 @@ declare module 'MicroBook/pages/categoryList' {
 }
 declare module 'MicroBook/routes' {
   /// <reference types="react" />
-  const _default: {
+  import { AppLayout } from 'MicroContainer/components/layout';
+  const _default: ({
       path: string;
-      component: import("react").LazyExoticComponent<typeof import("../pages/bookList").default>;
+      component: typeof AppLayout;
       name: string;
-  }[];
+      children: {
+          path: string;
+          component: import("react").LazyExoticComponent<typeof import("../pages/bookList").default>;
+          name: string;
+      }[];
+  } | {
+      path: string;
+      component: import("react").LazyExoticComponent<typeof import("../pages/categoryList").default>;
+      name: string;
+      children?: undefined;
+  })[];
   export default _default;
 
 }
